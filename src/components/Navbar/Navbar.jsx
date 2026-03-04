@@ -19,7 +19,7 @@ const Navbar = () => {
               <li  className='text-base font-medium hover:text-[#422AD5]'>Contact</li>
             </ul>
           </div>
-          <a className="btn font-bold text-xl">CS — Ticket System</a>
+          <a className="font-bold text-xl">CS — Ticket System</a>
         </div>
         
 

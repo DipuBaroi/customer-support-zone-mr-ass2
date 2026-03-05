@@ -27,7 +27,7 @@ const [resolvedTicket, setResolvedTicket] = useState([])
 const handleInProgress = (ticket)=>{
  setInProgress(inProgress+1)
  setSelectedTicket([...selectedTicket, ticket])
- toast('One Ticket Is Selected')
+ toast('Task Is Selected')
 }
 
 const handleResolved = (ticket) =>{
@@ -57,7 +57,7 @@ const handleResolved = (ticket) =>{
       ></Tickets>
 
       <Footer></Footer>
-      <ToastContainer></ToastContainer>
+      <ToastContainer position='top-right'></ToastContainer>
 
 
     </>

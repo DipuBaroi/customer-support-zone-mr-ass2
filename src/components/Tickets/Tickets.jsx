@@ -10,21 +10,22 @@ const Tickets = ({ customersPromise, handleInProgress, selectedTicket, handleRes
 
 
     return (
-        <div className='w-11/12 mx-auto flex gap-3 '>
-            <div className=' w-3/4'>
+        <div className='w-11/12 mx-auto flex flex-col md:flex-row gap-3 '>
+            <div className=' w-full md:w-3/4'>
                 <h1 className='text-2xl font-semibold text-[#34485A] mb-4'>Customer Tickets</h1>
 
-                <div className="grid grid-cols-2 gap-4">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                     {
                         tickets.map(ticket => <Ticket
                             key={ticket.id}
                             ticket={ticket}
                             handleInProgress={handleInProgress}
+                            
                         ></Ticket>)
                     }
                 </div>
             </div>
-            <div className=' w-1/4'>
+            <div className=' w-full md:w-1/4 mt-6 md:mt-0'>
                 <div className='mb-10'>
                     <h1 className='text-2xl font-semibold text-[#34485A] mb-4'>Task Status</h1>
                     {

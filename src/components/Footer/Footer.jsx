@@ -7,7 +7,7 @@ import email from '../../assets/email.png'
 
 const Footer = () => {
     return (
-        <section className='mt-10 bg-black'>
+        <section className='mt-20 bg-black'>
             <div className='grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 p-20 text-white gap-3'>
                 <div>
                     <h3 className='font-bold text-xl mb-8'>CS — Ticket System</h3>

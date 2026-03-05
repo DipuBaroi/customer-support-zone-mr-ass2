@@ -6,7 +6,7 @@ const Ticket = ({ticket, handleInProgress}) => {
     // console.log(ticket);
     const {id, title, description, customer, priority, status, createdAt } = ticket
     return (
-        <div onClick={()=>handleInProgress(ticket)} className='cursor-pointer p-4 rounded-lg shadow space-y-4'>
+        <div onClick={()=>handleInProgress(ticket)} className='cursor-pointer p-4 rounded-lg shadow space-y-4 bg-white'>
             <div className='flex justify-between'>
                 <h3 className='text-lg font-medium'>{title}</h3>
               <div className='flex gap-2 items-center bg-[#B9F8CF] px-3 py-1 rounded-2xl'>

@@ -1,4 +1,4 @@
-
+import { toast, ToastContainer } from 'react-toastify';
 import { useState } from 'react'
 import './App.css'
 import Banner from './components/Banner/Banner'
@@ -27,6 +27,7 @@ const [resolvedTicket, setResolvedTicket] = useState([])
 const handleInProgress = (ticket)=>{
  setInProgress(inProgress+1)
  setSelectedTicket([...selectedTicket, ticket])
+ toast('One Ticket Is Selected')
 }
 
 const handleResolved = (ticket) =>{
@@ -34,6 +35,7 @@ const handleResolved = (ticket) =>{
   steResolved(resolved+1)
   setInProgress(inProgress-1)
   setResolvedTicket([...resolvedTicket, ticket])
+  toast('The Task is Resolved')
 }
 
 
@@ -55,6 +57,7 @@ const handleResolved = (ticket) =>{
       ></Tickets>
 
       <Footer></Footer>
+      <ToastContainer></ToastContainer>
 
 
     </>

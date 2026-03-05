@@ -11,7 +11,7 @@ const Tickets = ({ customersPromise, handleInProgress, selectedTicket, handleRes
 
     return (
         <div className='w-11/12 mx-auto flex gap-3 '>
-            <div className='border-2 border-b-fuchsia-900 w-3/4'>
+            <div className=' w-3/4'>
                 <h1 className='text-2xl font-semibold text-[#34485A] mb-4'>Customer Tickets</h1>
 
                 <div className="grid grid-cols-2 gap-4">
@@ -24,7 +24,7 @@ const Tickets = ({ customersPromise, handleInProgress, selectedTicket, handleRes
                     }
                 </div>
             </div>
-            <div className='border-2 border-b-fuchsia-900 w-1/4'>
+            <div className=' w-1/4'>
                 <div className='mb-10'>
                     <h1 className='text-2xl font-semibold text-[#34485A] mb-4'>Task Status</h1>
                     {
@@ -32,7 +32,7 @@ const Tickets = ({ customersPromise, handleInProgress, selectedTicket, handleRes
                             <p className='text-[#627382]'>Select a Task to add to Task Status</p>
                         ) : (
                             selectedTicket.map(ticket => (
-                                <div key={ticket.id} className='p-4 shadow-lg border-2 border-amber-300 my-5 space-y-3 rounded-lg'>
+                                <div key={ticket.id} className='p-4 shadow-lg my-5 space-y-3 rounded-lg bg-white'>
                                     <h3 className='font-semibold'>{ticket.title}</h3>
                                     <button onClick={()=>handleResolved(ticket)} className='btn bg-[#02A53B] text-white w-full'>Complete</button>
                                 </div>
@@ -51,7 +51,7 @@ const Tickets = ({ customersPromise, handleInProgress, selectedTicket, handleRes
                             <p className='text-[#627382]'>No Resolved Task yet</p>
                         ): (
                             resolvedTicket.map(ticket=>(
-                                <div key={ticket.id} className='bg-[#E0E7FF] p-4 mb-4'>
+                                <div key={ticket.id} className='bg-[#E0E7FF] p-4 mb-4 rounded-lg'>
                                     <h3 className='font-semibold'>{ticket.title}</h3>
                                 </div>
                             ))
